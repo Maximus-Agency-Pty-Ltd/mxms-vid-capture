@@ -1,0 +1,30 @@
+{
+  "name": "mxms-vid-capture",
+  "version": "0.0.1",
+  "description": "Video capture for our private cap apps",
+  "cordova": {
+    "id": "nl.x-services.plugins.videocaptureplus",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maximus-Agency-Pty-Ltd/mxms-vid-capture.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Maximus Agency Pty Ltd",
+  "license": "MIT",
+  "homepage": "https://github.com/Maximus-Agency-Pty-Ltd/mxms-vid-capture#readme"
+}

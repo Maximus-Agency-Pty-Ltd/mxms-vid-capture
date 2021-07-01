@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="nl.x-services.plugins.videocaptureplus"
+        version="0.0.1">
+
+    <name>VideoCapturePlus</name>
+    <description>
+        Adapted from an abandoned Video Capture plugin
+    </description>
+    <license>MIT</license>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+    <dependency id="cordova-plugin-compat" version="^1.1.0" />
+    <js-module src="www/VideoCapturePlus.js" name="VideoCapturePlus">
+        <clobbers target="window.plugins.videocaptureplus"/>
+    </js-module>
+
+    <!-- iOS -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="VideoCapturePlus">
+                <param name="ios-package" value="VideoCapturePlus"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/VideoCapturePlus.h"/>
+        <source-file src="src/ios/VideoCapturePlus.m"/>
+        <framework src="CoreGraphics.framework"/>
+        <framework src="MobileCoreServices.framework"/>
+    </platform>
+
+    <!-- Android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="VideoCapturePlus">
+                <param name="android-package" value="nl.xservices.plugins.videocaptureplus.VideoCapturePlus"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.CAMERA" />
+        </config-file>
+        <source-file src="src/android/nl/xservices/plugins/videocaptureplus/VideoCapturePlus.java" target-dir="src/nl/xservices/plugins/videocaptureplus"/>
+        <source-file src="src/android/nl/xservices/plugins/videocaptureplus/FileHelper.java" target-dir="src/nl/xservices/plugins/videocaptureplus"/>
+    </platform>
+
+</plugin>
