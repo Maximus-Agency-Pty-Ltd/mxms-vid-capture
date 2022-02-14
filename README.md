@@ -1,5 +1,7 @@
 # MXMS Vid Capture
 
+Important note: this video capture is 'always on' for the flash.
+
 ## Usage
 
 ```javascript
