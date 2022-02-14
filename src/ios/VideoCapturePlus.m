@@ -227,9 +227,9 @@
 
             // TODO make this configurable via the API (but only if Android supports it)
             // pickerController.cameraFlashMode = UIImagePickerControllerCameraFlashModeAuto;
-            // pickerController.cameraFlashMode = UIImagePickerControllerCameraFlashModeOn;
+            pickerController.cameraFlashMode = UIImagePickerControllerCameraFlashModeOn;
 
-            pickerController.cameraFlashMode = UIImagePickerController.CameraFlashMode.on;
+            // pickerController.cameraFlashMode = UIImagePickerController.CameraFlashMode.on;
         }
         
         // CDVImagePickerPlus specific property
